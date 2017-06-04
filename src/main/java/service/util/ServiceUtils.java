@@ -8,6 +8,11 @@ public class ServiceUtils {
         public static final String DELETE_LOGIN = "/deleteLogin";
         public static final String UPDATE_LOGIN = "/updateLogin";
         public static final String EXIST_LOGIN = "/existLogin";
+    }
 
+    public static final class SecurityConstants {
+        public static final String AUTHENTICATE_TYPE = "WWW-Authenticate";
+        public static final String BASIC_REALM = "Basic realm=\"%s\"";
+        public static final String REALM_NAME = "Services Realm";
     }
 }
