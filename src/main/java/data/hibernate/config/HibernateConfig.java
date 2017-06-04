@@ -1,6 +1,7 @@
 package data.hibernate.config;
 
 import data.model.login.Login;
+import data.model.userdetail.UserDetail;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -54,7 +55,7 @@ public class HibernateConfig {
 	public SessionFactory sessionFactory() {		
 		LocalSessionFactoryBean lsfb = new LocalSessionFactoryBean();
 	    lsfb.setDataSource(getDataSource());
-	    lsfb.setAnnotatedClasses(User.class, Password.class, Login.class);
+	    lsfb.setAnnotatedClasses(User.class, Password.class, Login.class, UserDetail.class);
 	    lsfb.setHibernateProperties(hibernateProperties());
 	    try {
 	    	lsfb.afterPropertiesSet();

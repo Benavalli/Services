@@ -5,10 +5,11 @@ import data.model.login.Login;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import service.bo.login.LoginServiceBO;
 
 @Service
 @Transactional
-public class LoginService {
+public class LoginService implements LoginServiceBO {
 
     @Autowired
     LoginBO loginBO;
