@@ -1,6 +1,7 @@
 *.iml
 .gradle
 /local.properties
+/classes
 /.idea/workspace.xml
 /.idea/runConfigurations.xml
 /.idea/vcs.xml
