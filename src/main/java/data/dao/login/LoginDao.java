@@ -37,8 +37,7 @@ public class LoginDao implements LoginBO{
 				.add(Restrictions.eq("senha.passwordCrypted", password))
 				.add(Restrictions.eq("active", true))
 				.add(Restrictions.eq("usuario.active", true))
-				.add(Restrictions.eq("senha.active", true))
-				,1,1);
+				.add(Restrictions.eq("senha.active", true)));
 
 		return loginList.isEmpty() ? null : loginList.get(0);
 

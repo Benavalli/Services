@@ -5,18 +5,18 @@ import org.springframework.security.access.annotation.Secured;
 
 public interface LoginServiceBO {
 
-    @Secured({"ROLE_ADMIN", "ROLE_USER"})
+    @Secured({"ADMIN"})
     void insertLogin(Login login);
 
-    @Secured ({"ROLE_ADMIN", "ROLE_USER"})
+    @Secured ({"ADMIN"})
     void deleteLogin(Login login);
 
-    @Secured ({"ROLE_ADMIN", "ROLE_USER"})
+    @Secured ({"ADMIN"})
     void updateLogin(Login login);
 
-    @Secured ({"ROLE_USER"})
+    @Secured ({"ADMIN", "USER"})
     Login getLogin(String loginName, String password);
 
-    @Secured ({"ROLE_USER"})
+    @Secured ({"ADMIN", "USER"})
     boolean existLogin(String loginName);
 }

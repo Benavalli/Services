@@ -21,7 +21,7 @@ public class UserDetailDao implements UserDetailBO{
 
         List<UserDetail> userDetailList = (List<UserDetail>) hibernateTemplate.findByCriteria(DetachedCriteria.forClass(UserDetail.class)
                 .add(Restrictions.eq("active", true))
-                .add(Restrictions.eq("user", user)), 1, 1);
+                .add(Restrictions.eq("user", user)));
 
         return userDetailList.isEmpty() ? null : userDetailList.get(0);
     }
