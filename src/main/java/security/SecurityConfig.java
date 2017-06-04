@@ -26,7 +26,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable()
                 .authorizeRequests()
-                .antMatchers("/user/**").hasAnyRole("ADMIN", "USER")
+                .antMatchers("/user/**").hasAnyRole("ROLE_ADMIN", "ROLE_USER")
                 .and().httpBasic().realmName(ServiceUtils.SecurityConstants.REALM_NAME)
                 .authenticationEntryPoint(serviceEntryPoint);
     }
