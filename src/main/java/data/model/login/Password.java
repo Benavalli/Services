@@ -1,12 +1,7 @@
 package data.model.login;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import org.hibernate.annotations.Proxy;
-
 import javax.persistence.*;
-
 import java.io.Serializable;
 import java.util.Date;
 
